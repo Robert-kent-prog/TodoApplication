@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState, useRef, useEffect } from 'react';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Provider as PaperProvider, Searchbar } from 'react-native-paper';
 import { useRouter } from 'expo-router';
-import Foundation from '@expo/vector-icons/Foundation';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
-import { TouchableOpacity } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function Index() {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState('');
+    const searchbarRef = useRef(null); // Reference for Searchbar
+
+    useEffect(() => {
+        // Focus the search bar when the component mounts
+        if (searchbarRef.current) {
+            searchbarRef.current.focus();
+        }
+    }, []);
 
     return (
         <PaperProvider>
@@ -21,14 +27,15 @@ export default function Index() {
 
                     <View style={styles.check1}>
                         <Searchbar
+                            ref={searchbarRef} // Set the reference
                             placeholder="Search"
                             onChangeText={setSearchQuery}
                             value={searchQuery}
-                            style={styles.searchbar} // Custom styling for the Searchbar
-                            placeholderTextColor="white" // Change placeholder text color
-                            inputStyle={styles.searchInput} // Custom input text style
+                            style={styles.searchbar}
+                            placeholderTextColor="white"
+                            inputStyle={styles.searchInput}
                             icon={({ size, color }) => (
-                                <Ionicons name="search" size={size} color="white" /> // Use "search" instead of "ios-search"
+                                <Ionicons name="search" size={size} color="white" />
                             )}
                         />
                     </View>
