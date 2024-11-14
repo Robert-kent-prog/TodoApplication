@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Provider as PaperProvider } from 'react-native-paper';
+import { Provider as PaperProvider, Button } from 'react-native-paper';
 import { useRouter } from 'expo-router';
 import Foundation from '@expo/vector-icons/Foundation';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -24,6 +24,7 @@ export default function Index() {
             <Foundation name="check" size={24} color="#03396c" />
           </View>
           <Dropdown onSelectItem={handleDropdownSelect} />
+
           <TouchableOpacity style={styles.search} onPress={() => router.push("./search")}>
             <Ionicons name="search-sharp" size={24} color="#fff" />
           </TouchableOpacity>
