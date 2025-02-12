@@ -2,21 +2,25 @@
 
 ### **Overview**  
 A React Native-based mobile application designed to help users manage their tasks efficiently. The app provides an intuitive interface with features like task categorization, search functionality, and a side drawer for navigation. This project is currently under development and will soon be available on the Google Play Store.  
----
+
 ### **Features**  
 - **Task Management**: Add, view, and delete tasks.  
 - **Categorization**: Organize tasks into different lists (e.g., "Work," "Personal").  
 - **Search Functionality**: Quickly find tasks using the search feature.  
 - **Side Drawer Navigation**: Access app settings and options easily.  
-- **Responsive Design**: Optimized for both Android and iOS devices.  
+- **Responsive Design**: Optimized for both Android and iOS devices.
+   
 ---
+
 ### **Technologies**  
 - **React Native**: For building the cross-platform mobile application.  
 - **Expo**: For simplifying the development process and enabling easy access to native features.  
 - **react-native-paper**: For UI components and theming.  
 - **Vector Icons**: For customizable icons (@expo/vector-icons).  
 - **JavaScript**: Programming language used for development.  
+
 ---
+
 ### **Code Overview**  
 #### **Header Section**  
 - Contains a check icon, dropdown menu for selecting task lists, and a search button.  
