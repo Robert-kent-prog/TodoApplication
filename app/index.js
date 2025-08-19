@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router';
 import Foundation from '@expo/vector-icons/Foundation';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Dropdown from '../components/DropDown'; // Ensure this is wrapped in Text correctly
-import SideDrawer from '../components/SideDrawer'; // Ensure this is wrapped in Text correctly
+import SideDrawer from './SideDrawer'; // Ensure this is wrapped in Text correctly
 import { TouchableOpacity } from 'react-native';
 
 export default function Index() {

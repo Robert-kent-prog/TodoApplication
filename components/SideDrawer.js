@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { Menu, Divider } from 'react-native-paper';
+import { Menu, Divider, Button } from 'react-native-paper';
 import AntDesign from '@expo/vector-icons/AntDesign';  // Importing AntDesign icons
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native'; // Import TouchableOpacity and Text
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Entypo from '@expo/vector-icons/Entypo';
+import { useRouter } from 'expo-router';
+
 
 const Dropdown = () => {
     const [visible, setVisible] = useState(false);
-
+    const router = useRouter();
     const openMenu = () => setVisible(true);
     const closeMenu = () => setVisible(false);
 
@@ -24,12 +26,12 @@ const Dropdown = () => {
         >
             {/* Menu items with icons */}
             <Menu.Item
-                onPress={() => { console.log('Option 1 clicked'); closeMenu(); }}
+                onPress={() => { router.push("app/setting/Settings.js"); closeMenu(); }}
                 title="Task Lists"
                 titleStyle={styles.menuItemTitle} // Change title color to white
             />
             <Menu.Item
-                onPress={() => { console.log('Option 2 clicked'); closeMenu(); }}
+                onPress={() => { }}
                 title="Add in Batch Mode"
                 titleStyle={styles.menuItemTitle} // Change title color to white
             />
