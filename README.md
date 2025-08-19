@@ -1,50 +1,91 @@
-# Welcome to your Expo app 👋
+## To-Do Mobile Application  
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+### **Overview**  
+A React Native-based mobile application designed to help users manage their tasks efficiently. The app provides an intuitive interface with features like task categorization, search functionality, and a side drawer for navigation. This project is currently under development and will soon be available on the Google Play Store.  
 
-## Get started
+### **Features**  
+- **Task Management**: Add, view, and delete tasks.  
+- **Categorization**: Organize tasks into different lists (e.g., "Work," "Personal").  
+- **Search Functionality**: Quickly find tasks using the search feature.  
+- **Side Drawer Navigation**: Access app settings and options easily.  
+- **Responsive Design**: Optimized for both Android and iOS devices.
+   
+---
 
-1. Install dependencies
+### **Technologies**  
+- **React Native**: For building the cross-platform mobile application.  
+- **Expo**: For simplifying the development process and enabling easy access to native features.  
+- **react-native-paper**: For UI components and theming.  
+- **Vector Icons**: For customizable icons (@expo/vector-icons).  
+- **JavaScript**: Programming language used for development.  
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+### **Code Overview**  
+#### **Header Section**  
+- Contains a check icon, dropdown menu for selecting task lists, and a search button.  
+- The `DropDown` component allows users to switch between different task lists.  
+- The `SideDrawer` component provides navigation options.  
 
-   ```bash
-    npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+#### **Content Section**  
+- Displays a message based on the selected task list:  
+  - If "All Lists" is selected, it shows "Nothing to do."  
+  - Otherwise, it indicates that the selected list is empty.  
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+#### **Styling**  
+- Uses `StyleSheet.create` to define reusable styles for the app's components.
+  
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### **Setup Instructions**  
+#### **Install Node.js and Expo CLI**  
+Ensure you have Node.js installed. Install Expo CLI globally:  
+```bash
+npm install -g expo-cli
+```
+#### **Clone the Repository**
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-repo-url/todo-app.git
+cd todo-app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+#### **Install Dependencies** 
+```bash
+npm install
+```
+#### **Clone the Repository** Run the Application
+**Start the development server**:
+```bash
+npm start
+```
+Use the Expo Go app on your device or emulator to scan the QR code and run the app.
 
-## Learn more
+#### **Future Plans** 
+ - **Categorization**:Task Creation and Editing: Allow users to add and edit tasks.
+ - **Persistent Storage**: Save tasks locally using AsyncStorage or integrate with a backend database.
+ - **Push Notifications**: Notify users about upcoming tasks.
+ - **Google Play Store Release**: Publish the app after completing development and testing.
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Contributing
 
-## Join the community
+If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. Suggestions and improvements are always welcome!
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## License
+
+This project is licensed under the **MIT License**. Feel free to use, modify, and distribute the code as needed.
+
+---
+
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+- **Email:** robertmuendo828@gmail.com  
+- **GitHub:** [@Robert-kent-prog](https://github.com/Robert-kent-prog)
